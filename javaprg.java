@@ -22,7 +22,8 @@ public class BasicArithmeticDemo
         //calculating number1 % number2;
        // int rem = number1 % number2;
  
-        //Displaying the values
+        //Displaying the values for arithmatic operation
+
         System.out.println("number1 : "+number1);
         System.out.println("number2 : "+number2);
         System.out.println("sum : "+sum);
