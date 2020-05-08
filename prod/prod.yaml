@@ -1,0 +1,2649 @@
+##############################################################################
+
+# Environment Details
+
+##############################################################################
+
+myproj_tier: "prod"
+
+myproj_name: "APOLLO-PROD"
+
+myproj_domain: "apollo_p01"
+
+myproj_artifact_label: "apollo"
+
+myproj_oltp_sid: "txapollo_p01"
+
+myproj_olap_sid: "dwapollo_p01"
+
+myproj_ALLexoneweb: "http://hosting.enterprismyproj.com/apollo_p01/ALLexOneWeb/"
+
+##############################################################################
+
+# JBoss Domain Details
+
+##############################################################################
+
+domain:
+
+  servertype: "app"
+
+  approle: "guest"
+
+  testappRequired: "false"
+
+  java:
+
+    opts: "-Xmx5128m -Xms5128m -XX:MaxMetaspaceSize=512M"
+
+  server:
+
+  - name: "server01"
+
+    host: "angel-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "angel-prod.enterprismyproj.com"
+
+      mgmt: "angel-admin.enterprismyproj.com"
+
+  - name: "server02"
+
+    host: "amazonforest-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "amazonforest-prod.enterprismyproj.com"
+
+      mgmt: "amazonforest-admin.enterprismyproj.com"
+
+  - name: "server03"
+
+    host: "custom-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "custom-prod.enterprismyproj.com"
+
+      mgmt: "custom-admin.enterprismyproj.com"
+
+  - name: "server04"
+
+    host: "bronx-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "bronx-prod.enterprismyproj.com"
+
+      mgmt: "bronx-admin.enterprismyproj.com"
+
+  - name: "server05"
+
+    host: "beast-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "beast-prod.enterprismyproj.com"
+
+      mgmt: "beast-admin.enterprismyproj.com"
+
+  - name: "server06"
+
+    host: "queens-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "queens-prod.enterprismyproj.com"
+
+      mgmt: "queens-admin.enterprismyproj.com"
+
+  - name: "server07"
+
+    host: "cable-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+     txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "cable-prod.enterprismyproj.com"
+
+      mgmt: "cable-admin.enterprismyproj.com"
+
+  - name: "server08"
+
+    host: "lifeguard-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "lifeguard-prod.enterprismyproj.com"
+
+      mgmt: "lifeguard-admin.enterprismyproj.com"
+
+  - name: "server09"
+
+    host: "castle-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "castle-prod.enterprismyproj.com"
+
+      mgmt: "castle-admin.enterprismyproj.com"
+
+  - name: "server10"
+
+    host: "longshot-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "longshot-prod.enterprismyproj.com"
+
+      mgmt: "longshot-admin.enterprismyproj.com"
+
+  - name: "server11"
+
+    host: "planet-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "planet-prod.enterprismyproj.com"
+
+      mgmt: "planet-admin.enterprismyproj.com"
+
+  - name: "server12"
+
+    host: "focus-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "focus-prod.enterprismyproj.com"
+
+      mgmt: "focus-admin.enterprismyproj.com"
+
+  - name: "server13"
+
+    host: "knockout-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "knockout-prod.enterprismyproj.com"
+
+      mgmt: "knockout-admin.enterprismyproj.com"
+
+  - name: "server14"
+
+    host: "magneto-admin.enterprismyproj.com"
+
+    port:
+
+      mgmt: "7211"
+
+      http: "8211"
+
+      ajp: "9211"
+
+      https: "10211"
+
+      iiop: "11211"
+
+      txnrecovery: "12211"
+
+      txnstatus: "13211"
+
+    interface:
+
+      app: "magneto-prod.enterprismyproj.com"
+
+      mgmt: "magneto-admin.enterprismyproj.com"
+
+  myproj_java_opts: "-DServerDeployMode=APP -Dmyproj.EnableDataHiding=false -DEXTERNAL.AIM.Outbound.Enable=N -DSecurity.FacilityLockingDisabled=N -DDowntimeDocumentRoot=/usr/local/batch_app_share/apollo_p01/downtime -Djava.io.tmpdir=/tmp/ehcache/apollo_p01 -Djava.util.Arrays.useLegacyMergeSort=true -Dcom.techrx.soap.client.propertyFile=externalinterface.properties -DEnableInterfaceAuth=token -DALLexOne.CacheMaxIdleSeconds=10 -DALLexOne.MaxCachedPerBoundaryType=100 -DALLexOne.MemoryCacheDelegatePluginOn=true -DALLexOne.MemoryCacheDelegatePluginTopicsOff=com.techrx.model.service.admin.ConfigurationPropertyPersistorImpl.PROPERTY,com.techrx.model.service.tools.drug.DrugService -DALLexOne.ServerAuthorizationEnabled=true -DALLexOne.InstalledPlugins=EHCache,EventNotification,CPS "
+
+  cachedomains: ""
+
+##############################################################################
+
+# JMS Cache Multicast props
+
+##############################################################################
+
+CacheServer:
+
+  CacheTopic:
+
+    MulticastAddress: ""
+
+    MulticastPort: ""
+
+    MulticastTTL: ""
+
+##############################################################################
+
+# JDBC Connection Pool Options
+
+##############################################################################
+
+ALLexOneLogin_1:
+
+  URL: "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=on)(FAILOVER=on)(ADDRESS=(PROTOCOL=TCP)(HOST=jalapeno-prod.enterprismyproj.com)(port=1539))(ADDRESS=(PROTOCOL=TCP)(HOST=cayenne-prod.enterprismyproj.com)(port=1539)))(CONNECT_DATA=(SERVICE_NAME=txapollo_p01)(failover_mode=(type=select)(method=basic))))"
+
+ALLexOne_1:
+
+  URL: "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=on)(FAILOVER=on)(ADDRESS=(PROTOCOL=TCP)(HOST=jalapeno-prod.enterprismyproj.com)(port=1539))(ADDRESS=(PROTOCOL=TCP)(HOST=cayenne-prod.enterprismyproj.com)(port=1539)))(CONNECT_DATA=(SERVICE_NAME=txapollo_p01)(failover_mode=(type=select)(method=basic))))"
+
+ALLexOneDW_1:
+
+  URL: "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=on)(FAILOVER=on)(ADDRESS=(PROTOCOL=TCP)(HOST=python-prod.enterprismyproj.com)(port=1539)))(CONNECT_DATA=(SERVICE_NAME=dwapollo_p01)(failover_mode=(type=select)(method=basic))))"
+
+##############################################################################
+
+# LDAP and Security
+
+##############################################################################
+
+ldap:
+
+  activedirectory:
+
+    referral: "no"
+
+  base:
+
+    dn: "dc=mps,dc=com"
+
+  cert:
+
+    attribute: "usercertificate;binary"
+
+    search: "o=CLIENTID"
+
+    usecert: "yes"
+
+  domain:
+
+    filter: "apollo"
+
+  loadpasswordpolicies: "yes"
+
+  log:
+
+    xfile: "most_recent_like:/usr/local/ALLexone/opendjlogs/shawshank_logs/prod_logs/audit*Z,most_recent_like:/usr/local/ALLexone/opendjlogs/shawshank_logs/prod_logs/access*Z,most_recent_like:/usr/local/ALLexone/opendjlogs/singsing_logs/prod_logs/audit*Z,most_recent_like:/usr/local/ALLexone/opendjlogs/singsing_logs/prod_logs/access*Z"
+
+  password: "myprojRead1"
+
+  rdn:
+
+    displayname: "displayname"
+
+    group:
+
+      attribute: "ismemberof"
+
+      objectclass: "groupofuniquenames"
+
+    org:
+
+      attribute: "o"
+
+    people:
+
+      rdn: "ou=people,ou=retail,o=apollo"
+
+      alternate: "ou=people,ou=retail,o=internal"
+
+    pwdexp: "pwdchangedtime"
+
+    roles: "ou=retail,o=apollo"
+
+    treetop: "o=apollo"
+
+  schema:
+
+    name: "sunone"
+
+  security:
+
+    policyagent: "none"
+
+  spa:
+
+    delimiter: ";"
+
+  url: "ldap://entrx-prod-ldapvip1.enterprismyproj.com:10389"
+
+  userid: "uid=myprojreader,ou=people,dc=mps,dc=com"
+
+##############################################################################
+
+# Logging Details (log4j props)
+
+#   default.log.appenders
+
+#       comma separated list
+
+#       valid values: FILE,EMAIL,HUB
+
+##############################################################################
+
+log:
+
+  default:
+
+    appenders: "FILE"
+
+    level: "ERROR"
+
+  logport: ""
+
+  recipient: "user@address.com"
+
+##############################################################################
+
+# Server connect props
+
+##############################################################################
+
+server:
+
+  java:
+
+    naming:
+
+      factory:
+
+        initial: "org.wildfly.naming.client.WildFlyInitialContextFactory"
+
+      provider:
+
+        url: "http-remoting://angel-prod.enterprismyproj.com:8211"
+
+  jmx:
+
+    pwd: "{{ user.password.app_pwd }}"
+
+    servers: "angel-prod.enterprismyproj.com:8211"
+
+    user: "{{ user.login_id.app_user }}"
+
+##############################################################################
+
+# Batch props
+
+##############################################################################
+
+batch:
+
+  data:
+
+    node: "/apollo-PROD"
+
+  java:
+
+    args: "-Xms256m -XX:MaxMetaspaceSize=512M -DEnableInterfaceAuth=token -DproxySet=true -Dhttp.proxyHost=myproj-ob-proxy -Dhttp.proxyPort=10000 -Dhttps.proxyHost=myproj-ob-proxy -Dhttps.proxyPort=10000 -Dhttp.nonProxyHosts=|localhost|*.enterprismyproj.com| -Dhttps.nonProxyHosts=|localhost|*.enterprismyproj.com| -Dlog4j.configuration=batch_log4j.properties -Djava.awt.headless=true -Doracle.jdbc.V8Compatible=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dhttps.protocols=TLSv1.2 -DEXTERNAL.security.secureFolder=/usr/local/ALLexone/security/EALLPCS-PROD"
+
+    default:
+
+      max:
+
+        mem: "-Xmx550m"
+
+  logs: "/usr/local/ALLexone/BATCH/apollo-PROD/logs"
+
+  roll_log_days: "7"
+
+  ALLexone:
+
+    base: "/usr/local/ALLexone"
+
+    data: "/usr/local/ALLexone/data/apollo-PROD"
+
+  techrx:
+
+    oltp:
+
+      driver: "oracle.jdbc.driver.OracleDriver"
+
+      id: "txstage"
+
+      pwd: "stage"
+
+      url: "jdbc:oracle:thin:@(description=(address_list=(load_balance=on)(failover=on)(address=(protocol=tcp)(host=jalapeno-prod)(port=1539))(address=(protocol=tcp)(host=cayenne-prod)(PORT=1539)))(connect_data=(service_name=txapollo_p01)(failover_mode=(type=select)(method=basic))))"
+
+    olap:
+
+      driver: "oracle.jdbc.driver.OracleDriver"
+
+      id: "txstage"
+
+      pwd: "stage"
+
+      url: "jdbc:oracle:thin:@python-prod.enterprismyproj.com:1539:dwapollo_p01"
+
+    medispan:
+
+      driver: "oracle.jdbc.driver.OracleDriver"
+
+      id: "txstage"
+
+      pwd: "stage"
+
+      url: "jdbc:oracle:thin:@(description=(address_list=(load_balance=on)(failover=on)(address=(protocol=tcp)(host=jalapeno-prod)(port=1539))(address=(protocol=tcp)(host=cayenne-prod)(PORT=1539)))(connect_data=(service_name=txapollo_p01)(failover_mode=(type=select)(method=basic))))"
+
+##############################################################################
+
+# ADSResponse props
+
+##############################################################################
+
+ads:
+
+  batch:
+
+    adsPass: ""
+
+    adsUser: ""
+
+    communicationErrorCode: "0"
+
+    communicationErrorMessage: "A communication error has occured."
+
+    facilityId: "555"
+
+    responseControlErrorExt: "tke"
+
+    responseControlSuccessExt: "tkc"
+
+    responseErrorExt: "omg"
+
+    responseSuccessExt: "odc"
+
+    validProcessDefinitionNum: "101000"
+
+##############################################################################
+
+# AIM props
+
+##############################################################################
+
+aim:
+
+  out:
+
+    http:
+
+      url: ""
+
+    jms:
+
+      connectionfactory: "jms/hub/QueueFactory"
+
+      queue: "jms/hub/ExternalQueue"
+
+  service:
+
+    config: "outboundAimServiceConfig.xml"
+
+##############################################################################
+
+# Ant props
+
+##############################################################################
+
+ant:
+
+  home:
+
+    path: "/usr/local/apache-ant-1.7.0"
+
+##############################################################################
+
+# AutoPullBack props
+
+##############################################################################
+
+autopullback:
+
+  config:
+
+    facilities:
+
+      sql: "select facility_num, facility_id from facility where facility_id in ('555')"
+
+##############################################################################
+
+# AutoRetry props
+
+##############################################################################
+
+autoretry:
+
+  jdbc:
+
+    datasource:
+
+      name: "jdbc/TheDatabase"
+
+##############################################################################
+
+# Conversion props
+
+##############################################################################
+
+conv:
+
+  sftp:
+
+    host: "emft.myprojhealth.com"
+
+    path: ""
+
+    pkey: "/home/txconv/.ssh/id_rsa"
+
+    port: "22"
+
+    user: "myprojconversions"
+
+  techrx:
+
+    format: "DELIM"
+
+    id1: "txconv"
+
+    ldrctl: ""
+
+    pwd1: "conv"
+
+##############################################################################
+
+# CSR Extract props
+
+##############################################################################
+
+csr:
+
+  extract:
+
+    cpy:
+
+      states: "AL,AK,AZ,AR,CA,CO,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY"
+
+      type: "sftp"
+
+    default:
+
+      dataLoader: "com.techrx.app.ALLexone.batch.controlledsubstancereporting.CSDataLoader"
+
+    # Specifies database connection used for uploading cs verification report to database
+
+    driver2:
+
+      driver: ""
+
+      id: ""
+
+      pwd: ""
+
+      url: ""
+
+    location:
+
+      local: "/usr/local/ALLexone/data/apollo-PROD/CSR/outbound"
+
+      remote: "/apollomyproj/CSR/prod/outgoing"
+
+    mail:
+
+      from: ""
+
+      host:
+
+        smtp: ""
+
+      to:
+
+        error: ""
+
+        report: ""
+
+    schema:
+
+      dw:
+
+        db: "ALLexone_dw_data"
+
+    sftp:
+
+      host: "emft.myprojhealth.com"
+
+      user: "txstage"
+
+##############################################################################
+
+# Data Extract props
+
+##############################################################################
+
+data:
+
+  extract:
+
+    auto_file_ftp: "myprojExtractAutoFTPRun.sh"
+
+    auto_file_generate: "myprojExtractAutoFileGenerateRun.sh"
+
+    custname: ""
+
+    dir:
+
+      output: "/usr/local/ALLexone/BATCH/apollo-PROD/logs"
+
+      work: "$ALLexONE_BIN"
+
+    ext:
+
+      xfile: ".txt"
+
+      gpg: ".gpg"
+
+    sftp:
+
+      dir: "/mpsdataextract/production"
+
+      host: "imft.myprojhealth.com"
+
+      user: "txstage"
+
+    tstmp: "`date +%Y%m%d%H%M`"
+
+##############################################################################
+
+# Downtime Reprocessor props
+
+##############################################################################
+
+downtime:
+
+  reprocessor:
+
+    facilities:
+
+      sql: "SELECT /* SQL:b5108690-c38e-404c-94e6-95e66a28f894 */ facility_num, facility_id, nvl(myproj_client_id,'myproj') as myproj_client_id, timezone_id  FROM facility WHERE EXISTS (select * from DT_TX dt where dt.facility_num = facility.facility_num)"
+
+email:
+
+  ids:
+
+    dbinfo: ""
+
+    fdb: ""
+
+    nddf: ""
+
+    tlog: ""
+
+##############################################################################
+
+# Adjudication Emulator props
+
+##############################################################################
+
+emulator:
+
+  mail:
+
+    appender: "NDCHealth.com"
+
+    smtp:
+
+      host: "vega.techrx.com"
+
+  port:
+
+    email:
+
+      first: ""
+
+      second: ""
+
+##############################################################################
+
+# ESV Prescriber Scrub (EPS)
+
+##############################################################################
+
+eps:
+
+  apply:
+
+    max:
+
+      processes: ""
+
+##############################################################################
+
+# ERP Process props
+
+##############################################################################
+
+erp:
+
+  initialActiveThreads: "5"
+
+  java:
+
+    max:
+
+      mem: "-Xmx2048m"
+
+  maxThreads: "20"
+
+  maxWaitingJobs: "9999"
+
+external:
+
+  #######################################
+
+  # External Extract props
+
+  #######################################
+
+  extract:
+
+    outbound:
+
+      path: "/usr/local/ALLexone/data/apollo-PROD/external_extract"
+
+    ateb:
+
+      filename: "apollo_ATEB_@start_date{%Y%m%d}.txt"
+
+      sftppath: "/apollomyproj/external_extract/prod/outgoing"
+
+    humira:
+
+      delimiter: "|"
+
+      filename: "HUMIRA_apollo_@run_date{%Y%m%d}@run_date{%H%M}.txt"
+
+      ndclist: "'00074379902','00074937402','00074433902','00074433906'"
+
+      sftppath: "/apollomyproj/external_extract/prod/outgoing"
+
+    inmar:
+
+      clientcode: ""
+
+      extractperiod: "7"
+
+      feedformat: "apollo-prism"
+
+      filename: "rx_phr_imsext@run_date{%Y%m%d}.9260"
+
+      sftppath: "/apollomyproj/external_extract/prod/inmar"
+
+    poscashsheet:
+
+      filename: "@start_date{%m%d}@run_date{%H%M}.RX"
+
+      sftppath: "/apollomyproj/external_extract/prod/outgoing"
+
+    servicemetrics:
+
+      filename: "service_metrics.@start_date{%Y%m%d}.csv"
+
+      sftppath: "/apollomyproj/external_extract/prod/outgoing"
+
+      summary: "Y"
+
+    surescripts:
+
+      delimiter: "|"
+
+      filename: "apollo-@start_date{%Y-%m-%d}-01.txt"
+
+      filetype: "P"
+
+      sftppath: "/apollomyproj/external_extract/prod/outgoing"
+
+    tranrx:
+
+      filename: "rx_tranrx@run_date{%m%d%Y}.txt"
+
+      sftppath: "/apollomyproj/external_extract/prod/outgoing"
+
+  #######################################
+
+  # External Interface props
+
+  #######################################
+
+  interface:
+
+    directout:
+
+      http:
+
+        http:
+
+          read:
+
+            timeout: "N/A"
+
+    pos:
+
+      out:
+
+        jms:
+
+          connectionfactory: "jms/hub/QueueFactory"
+
+          queue: "jms/hub/ExternalQueue"
+
+          replyto: "10000"
+
+          timeout: "N"
+
+          usetempqueue: "jms/hub/ExternalReplyQueue"
+
+    security:
+
+      eALLPCS:
+
+        provider: "org.bouncycastle.jcajce.provider.BouncyCastleFipsProvider"
+
+      secureFolder: "/usr/local/ALLexone/security/EALLPCS-PROD"
+
+##############################################################################
+
+# FAX props
+
+##############################################################################
+
+fax:
+
+  http:
+
+    password: "Strawberry"
+
+    receiver: "https://ssltemp.enterprismyproj.com/apollo_p01/ALLexOneSoap/fax"
+
+    userid: "apolloO"
+
+  out:
+
+    http:
+
+      url: "https://messaging.simplelink.com/soap/sync"
+
+    jms:
+
+      connectionfactory: "jms/hub/QueueFactory"
+
+      queue: "jms/hub/ExternalQueue"
+
+##############################################################################
+
+# FDB props
+
+##############################################################################
+
+fdb:
+
+  cost_loadtype: "FULL"
+
+  drugxref_nametype: "2"
+
+  sqlldr:
+
+    direct: "true"
+
+  external_table_dir: ""
+
+  external_table_user: ""
+
+  awp_merge:
+
+    email:
+
+      from: ""
+
+      err: ""
+
+      rpt: ""
+
+    push_rpt: ""
+
+  directories:
+
+    medknowledge_base: ""
+
+    fdb_src: ""
+
+    medispan_src: ""
+
+##############################################################################
+
+# Feed CONFIG props
+
+##############################################################################
+
+feed:
+
+  config:
+
+    ex_cash: "N/A"
+
+    ex_copay100: "N/A"
+
+    ex_sameday_reversal: "N/A"
+
+    ex_tpmanual: "N/A"
+
+    ex_tponline: "N/A"
+
+    feed_event: "N/A"
+
+    feed_format: "N/A"
+
+    is_update: "N/A"
+
+    record_format: "N/A"
+
+    xml_file: "N/A"
+
+##############################################################################
+
+# FileProcessor props
+
+##############################################################################
+
+fileprocessor:
+
+  app1:
+
+    enabled: ""
+
+    local:
+
+      in: ""
+
+      out: ""
+
+      password: ""
+
+      proxy:
+
+        port: ""
+
+        url: ""
+
+      type: ""
+
+      url: ""
+
+      username: ""
+
+  app2:
+
+    enabled: ""
+
+    local:
+
+      in: ""
+
+      out: ""
+
+      password: ""
+
+      proxy:
+
+        port: ""
+
+        url: ""
+
+      type: ""
+
+      url: ""
+
+      username: ""
+
+    remote:
+
+      ctrl_file:
+
+        ext: ""
+
+  batch:
+
+    enabled: ""
+
+    local:
+
+      in: ""
+
+      out: ""
+
+      password: ""
+
+      type: ""
+
+      url: ""
+
+      username: ""
+
+    remote:
+
+      in: ""
+
+      out: ""
+
+      password: ""
+
+      type: ""
+
+      url: ""
+
+      username: ""
+
+  shared:
+
+    local:
+
+      ctrl_file:
+
+        ext: ""
+
+      xfile:
+
+        ext: ""
+
+    remote:
+
+      ctrl_file:
+
+        ext: ""
+
+      xfile:
+
+        ext: ""
+
+      in: ""
+
+      out: ""
+
+      password: ""
+
+      proxy:
+
+        url: ""
+
+        port: ""
+
+      type: ""
+
+      url: ""
+
+      username: ""
+
+##############################################################################
+
+# Financial Feed props
+
+##############################################################################
+
+financial:
+
+  feed:
+
+    audit:
+
+      outbound:
+
+        extension: "txt"
+
+        filename: "financial_audit"
+
+    backup:
+
+      path: "/usr/local/ALLexone/data/apollo-PROD/financial_feed/processed"
+
+    batchprocess:
+
+      aud:
+
+        class: ""
+
+      class: ""
+
+    commit:
+
+      point: "5000"
+
+    cpy:
+
+      second: "false"
+
+      type: ""
+
+    days:
+
+      ago: "1"
+
+    diff:
+
+      break: ""
+
+      email: ""
+
+    eod:
+
+      db:
+
+        schema: "ALLexone_eod_data"
+
+    feed:
+
+      format: "N/A"
+
+      source: ""
+
+    xfile:
+
+      config: ""
+
+    outbound:
+
+      extension: "txt"
+
+      filename: "financial_feed.prod"
+
+      path: "/usr/local/ALLexone/data/apollo-PROD/financial_feed/outbound"
+
+    pgp:
+
+      ext: ""
+
+      homedir: ""
+
+      program: ""
+
+      recipient: ""
+
+    record:
+
+      format: "N/A"
+
+    remote:
+
+      audit:
+
+        xfile:
+
+          location: "apollo-PROD/financial_feed/prod/outgoing"
+
+      xfile:
+
+        location: "apollomyproj/financial_feed/prod/outgoing"
+
+      include:
+
+        datestamp: "true"
+
+      run:
+
+        audit: "false"
+
+      second:
+
+        xfile: ""
+
+##############################################################################
+
+# Generate statement#
+
+##############################################################################
+
+generate:
+
+  statement:
+
+    arextract:
+
+      ftp:
+
+        key:
+
+          location: ""
+
+        pass: ""
+
+        url: ""
+
+        user: ""
+
+    out:
+
+      ar:
+
+        data:
+
+          xfile: ""
+
+##############################################################################
+
+# HL7 props
+
+# Soap outbound url used for soap messages going to Rhapsody.
+
+# This will be the URL Rhapsody is listening on.
+
+##############################################################################
+
+hl7:
+
+  queue:
+
+    webservice:
+
+      url: "N/A"
+
+  realtime:
+
+    out:
+
+      http:
+
+        read:
+
+          timeout: "N/A"
+
+      jms:
+
+        connectionfactory: "N/A"
+
+        queue: "N/A"
+
+    webservice:
+
+      url: "N/A"
+
+##############################################################################
+
+# Hub props
+
+##############################################################################
+
+hub:
+
+  java:
+
+    naming:
+
+      factory:
+
+        initial: "org.wildfly.naming.client.WildFlyInitialContextFactory"
+
+      provider:
+
+        url: "http-remoting://angel-prod.enterprismyproj.com:8211"
+
+##############################################################################
+
+# HVS
+
+##############################################################################
+
+hvs:
+
+  auth:
+
+    cert:
+
+      id: ""
+
+  out:
+
+    http:
+
+      url: ""
+
+  # hvs.allowedRunLevel = { ALL | BATCH_WORKFLOW | BATCH_DIRECT | NONE }
+
+  #    ALL             - HVS messages may be sent from Realtime Workflow and all batch jobs
+
+  #    BATCH_WORKFLOW  - HVS messages may be sent from all batch jobs, but not Realtime Workflow
+
+  #    BATCH_DIRECT    - HVS messages will ONLY be sent from the SoapProcessor batch job
+
+  #    NONE            - HVS messages will NOT BE SENT
+
+  # Default if not set = ALL
+
+  allowedRunLevel: ""
+
+##############################################################################
+
+# Inbound EDI props
+
+##############################################################################
+
+inbound:
+
+  edi:
+
+    receiverid:
+
+      costbase:
+
+        1: "receiver1_edicb1"
+
+        2: "receiver2_edicb2"
+
+        3: "receiver3_edicb3"
+
+    ALLexone:
+
+      costbase:
+
+        1: "CB1"
+
+        2: "CB2"
+
+        3: "CB3"
+
+##############################################################################
+
+# Interface props
+
+##############################################################################
+
+interface:
+
+  auth:
+
+    security: "token"
+
+inventory:
+
+  #######################################
+
+  # Inventory EDI Load props
+
+  #######################################
+
+  edi:
+
+    costbasis:
+
+      path: "/usr/local/ALLexone/BATCH/properties/InventoryEDIDocumentCostBasis.properties"
+
+    error:
+
+      path: "/usr/local/ALLexone/inventory/edi/errors"
+
+    login:
+
+      id: "ALLexone_1_6"
+
+      password: "iduno"
+
+    path: "/usr/local/ALLexone/inventory/edi"
+
+    removeFiles: "false"
+
+    success:
+
+      path: "/usr/local/ALLexone/inventory/edi/success"
+
+  #######################################
+
+  # InventoryProcess props
+
+  #######################################
+
+  process:
+
+    amerisource:
+
+      receiver:
+
+        id: ""
+
+    cardinal_health:
+
+      receiver:
+
+        id: ""
+
+    purchasing:
+
+      recommendedpo:
+
+        withinDays: "120"
+
+    vendor1:
+
+      receiver:
+
+        id: ""
+
+    vendor2:
+
+      receiver:
+
+        id: ""
+
+    vendor3:
+
+      receiver:
+
+        id: ""
+
+    vendor4:
+
+      receiver:
+
+        id: ""
+
+    vendor5:
+
+      receiver:
+
+        id: ""
+
+##############################################################################
+
+# IOT props
+
+##############################################################################
+
+iot:
+
+  days:
+
+    ago:
+
+      from:
+
+        daily: "1"
+
+        initial: "90"
+
+      inventory: "1"
+
+      to:
+
+        daily: "0"
+
+        initial: "0"
+
+  delimiter: "|"
+
+  dir:
+
+    base: "iot"
+
+    extract: "extract"
+
+    log:
+
+      error: "error"
+
+  ext:
+
+    fn: "txt"
+
+  list:
+
+    email: "MPSServiceOperations@McKesson.com"
+
+  name:
+
+    chain: "apolloprod"
+
+##############################################################################
+
+# IVR props
+
+##############################################################################
+
+ivr:
+
+  out:
+
+    http:
+
+      url: "https://rxcall.apollo.com/rxcall/callreqws.aspx"
+
+    jms:
+
+      connectionfactory: "jms/hub/QueueFactory"
+
+      queue: "jms/hub/ExternalQueue"
+
+ queue:
+
+    out:
+
+      http:
+
+        url: "http://myproj-hosting-prod-vip:15100/apollo_p01/ALLexOneSoap/ivr"
+
+##############################################################################
+
+# Batch Job Event Notification props
+
+##############################################################################
+
+jndi:
+
+  jms:
+
+    pwd: "{{ user.password.app_pwd }}"
+
+    user: "{{ user.login_id.app_user }}"
+
+##############################################################################
+
+# McKesson 340B
+
+##############################################################################
+
+mck340b:
+
+  db:
+
+    schema: ""
+
+##############################################################################
+
+# McKesson Connect props
+
+##############################################################################
+
+mckconnect:
+
+  com:
+
+    techrx:
+
+      security:
+
+        jce:
+
+          keystore:
+
+            xfile: "/usr/local/ALLexone/keystore/McKessonConnect.jks"
+
+            token: "changeit"
+
+        keystore:
+
+          action: "upload_keystore"
+
+  onemck:
+
+    com:
+
+      techrx:
+
+        security:
+
+          jce:
+
+            entry:
+
+              token: "changeit"
+
+          x509cert:
+
+            cer:
+
+              distinguishedname: "CN=localhost, OU=Pharma, O=McKesson, L=San Fransisco, ST=CA, C=US"
+
+##############################################################################
+
+# MedGuide props
+
+##############################################################################
+
+medguide:
+
+  web:
+
+    xfile:
+
+      dest: ""
+
+##############################################################################
+
+# Medicaid props
+
+##############################################################################
+
+medicaid:
+
+  state:
+
+    list: "ALL"
+
+##############################################################################
+
+# Medispan API Load props
+
+##############################################################################
+
+medispan:
+
+  imageloader:
+
+    xfile:
+
+      location: "/usr/local/ALLexone/data/apollo-PROD/mds_daily/incoming/"
+
+    image:
+
+      provider: "Medispan"
+
+  imm:
+
+    dir:
+
+      content:
+
+        dir: "/usr/local/ALLexone/data/apollo-PROD/mds_daily/incoming/"
+
+    run:
+
+      commit: "100"
+
+      full: "true"
+
+  java:
+
+    max:
+
+      mem: ""
+
+  load:
+
+    emailid:
+
+      monitor: "MPSServiceOperations@McKesson.com ALLexOneDatabaseServices@Mckesson.com"
+
+      run: ""
+
+    type: "incremental"
+
+  medguide:
+
+    scp:
+
+      port: ""
+
+    use:
+
+      pcl: "Y"
+
+  password: "medispan"
+
+  #######################################
+
+  # IFC html files hosting location
+
+  #######################################
+
+  ifc:
+
+    dir:
+
+      content: "/usr/local/ALLexone/data/apollo-PROD/mds_daily/incoming/"
+
+      out: "/usr/local/ALLexone/data/apollo-PROD/mds_daily/ifc_out/"
+
+    web:
+
+      xfile:
+
+        dest: ""
+
+##############################################################################
+
+# MedSynchDataFeed props
+
+##############################################################################
+
+medsynch:
+
+  folder:
+
+    out: ""
+
+    remote: ""
+
+  resource:
+
+    identity:
+
+      xfile: ""
+
+    key:
+
+      phrase: ""
+
+    passwd: ""
+
+    type: ""
+
+    url: ""
+
+    userid: ""
+
+##############################################################################
+
+# MMS props
+
+##############################################################################
+
+mms:
+
+  url: ""
+
+ods:
+
+  exp_dir:
+
+    partition: ""
+
+    remote_partition: ""
+
+outbound:
+
+  #######################################
+
+  # Outbound Email props
+
+  #######################################
+
+  email:
+
+    myproj:
+
+      mail:
+
+        bounceBackTo: ""
+
+        format: "TEXT"
+
+        from: "PharmacyNotification@apollo.com"
+
+        ship:
+
+          confirm:
+
+            subject: ""
+
+        smtp:
+
+          host: "localhost"
+
+          password: ""
+
+          port: "25"
+
+          userid: ""
+
+  #######################################
+
+  # IPC props
+
+  #######################################
+
+  ipcharge:
+
+    http:
+
+      url:
+
+        ipc: "https://API.VFIPAYNA.COM/IPCAdminAPI/RH.IPC"
+
+        ipct: "https://API.VFIPAYNA.COM/IPCHAPI/RH.ASPX"
+
+  #######################################
+
+  # Outbound IVR props
+
+  #######################################
+
+  ivr:
+
+    includepatientinfo: ""
+
+    messageversion: ""
+
+##############################################################################
+
+# PAL Extract props
+
+##############################################################################
+
+pal:
+
+  out:
+
+    dir: ""
+
+  remote:
+
+    xfile:
+
+      location: ""
+
+##############################################################################
+
+# PASS Packaging props
+
+##############################################################################
+
+pass:
+
+  packaging:
+
+    batch:
+
+      passorder:
+
+        maxThreads: ""
+
+        out:
+
+          dir: ""
+
+##############################################################################
+
+# PCI KeyStore props
+
+##############################################################################
+
+pci:
+
+  com:
+
+    techrx:
+
+      security:
+
+        jce:
+
+          keystore:
+
+            xfile: ""
+
+            token: ""
+
+        keystore:
+
+          action: ""
+
+##############################################################################
+
+# POS Cleanup props
+
+##############################################################################
+
+pos:
+
+  cleanup:
+
+    extint_url: ""
+
+ 
+
+##############################################################################
+
+# PPOK props
+
+##############################################################################
+
+ppok:
+
+  days:
+
+    allowed: ""
+
+  outbound:
+
+    extension: ""
+
+    path: ""
+
+  rows:
+
+    allowed: ""
+
+  sftp:
+
+    host: ""
+
+    user: "txstage"
+
+##############################################################################
+
+# Prescriber ESV props For PrescriberScrubbing
+
+##############################################################################
+
+prescriber:
+
+  esv:
+
+    email:
+
+      enabled: ""
+
+      id: ""
+
+    sftp:
+
+      host: ""
+
+      indir: ""
+
+      outdir: ""
+
+      pwd: ""
+
+      user: "txstage"
+
+##############################################################################
+
+# Product Load props
+
+##############################################################################
+
+product:
+
+  load:
+
+    archive:
+
+      in:
+
+        dir: "/usr/local/ALLexone/data/apollo-PROD/inventory/archive"
+
+      out:
+
+        dir: "/usr/local/ALLexone/data/apollo-PROD/inventory/archive"
+
+    commit:
+
+      freq: "500"
+
+    customer:
+
+      env: ""
+
+    delimiter: ";"
+
+    email: ""
+
+    error:
+
+      xfile: "ErrorFile.txt"
+
+    fail:
+
+      email: ""
+
+    inbound:
+
+      dir: "/usr/local/ALLexone/data/apollo-PROD/inventory/incoming"
+
+    message:
+
+      xfile: "MessageFile.txt"
+
+    outbound:
+
+      dir: "/usr/local/ALLexone/data/apollo-PROD/inventory/output"
+
+    remote:
+
+      xfile:
+
+        location: ""
+
+    sftp:
+
+      commandfile: ""
+
+      host: "emft.myprojhealth.com"
+
+      user: "txstage"
+
+##############################################################################
+
+# Product Mapping props
+
+##############################################################################
+
+productmapping:
+
+  sftp:
+
+    host: ""
+
+    user: "txstage"
+
+##############################################################################
+
+# ProviderScience DataExtract props
+
+##############################################################################
+
+provider:
+
+  science:
+
+    delimiter: ""
+
+    dir:
+
+      base: ""
+
+      error:
+
+        log: ""
+
+      extract: ""
+
+      processed: ""
+
+    fn_ext: ""
+
+    sftp:
+
+      host: ""
+
+      outdir: ""
+
+      pwd: ""
+
+      user: ""
+
+##############################################################################
+
+# Reorderpt DataExtract props
+
+##############################################################################
+
+reordpt:
+
+  delimiter: ""
+
+  email_list: ""
+
+  fn_ext: ""
+
+  productload_input_dir: ""
+
+  reset_days_ago: ""
+
+  rxhist_days_ago: ""
+
+  work_dir: ""
+
+##############################################################################
+
+# SFTP props
+
+##############################################################################
+
+sftp:
+
+  host: "emft.myprojhealth.com"
+
+  user: "txstage"
+
+##############################################################################
+
+# Central Fill Soap Processor props
+
+##############################################################################
+
+soap:
+
+  processor:
+
+    java_args: ""
+
+    remote:
+
+      password: "na"
+
+      port: "na"
+
+      proxy: "na"
+
+      type: "type"
+
+      url: ""
+
+      user:
+
+        name: "na"
+
+    retry:
+
+      maxdays: "3"
+
+      maxnum: "100"
+
+      minminutes: "5"
+
+#################################################
+
+# Specialty Drug Process props For Diplomat
+
+#################################################
+
+specialtydrug:
+
+  batch:
+
+    diplomat:
+
+      ftp:
+
+        directory: ""
+
+        pass: ""
+
+        url: ""
+
+        usr: ""
+
+      identity:
+
+        xfile: ""
+
+      key:
+
+        phrase: ""
+
+      maxThreads: ""
+
+      out:
+
+        dir: ""
+
+      purge:
+
+        days: ""
+
+  diplomat:
+
+    datalistener:
+
+      classname: ""
+
+#################################################
+
+# Specialty Drug Updated
+
+#################################################
+
+specialtydrugupdate:
+
+  batch:
+
+    specialty:
+
+      in:
+
+        dir: ""
+
+      out:
+
+        dir: ""
+
+      purge:
+
+        days: ""
+
+##############################################################################
+
+# Store History Data Packager
+
+##############################################################################
+
+store:
+
+  history:
+
+    copy_method: "none"
+
+    cp:
+
+      xfile:
+
+        dest: ""
+
+    data:
+
+      db:
+
+        url: "jdbc:qed:/usr/local/ALLexone/data/apollo-PROD/downtime/history/create;useLockFile=false;create=true;logger=0"
+
+      in: "/usr/local/ALLexone/data/apollo-PROD/downtime/history/in"
+
+      location: "/usr/local/ALLexone/data/apollo-PROD/downtime/history/dump"
+
+      out: "/usr/local/batch_app_share/apollo_p01/downtime"
+
+    downtime:
+
+      history:
+
+        create:
+
+          dir: "/usr/local/ALLexone/data/apollo-PROD/downtime/history/create"
+
+    for:
+
+      facilities:
+
+        sql: "SELECT facility_num, facility_id FROM facility WHERE facility_num in (select distinct facility_num from facility_login where datestamp > (trunc(sysdate) - 7))"
+
+    scp:
+
+      xfile:
+
+        dest: ""
+
+      port: "22"
+
+    zip:
+
+      out: "Yes"
+
+##############################################################################
+
+# Supplier Load props
+
+##############################################################################
+
+supplier:
+
+  load:
+
+    bad:
+
+      xfile: "/usr/local/ALLexone/data/inventory/supplier_load_bad_file"
+
+    xfile: "/usr/local/ALLexone/data/inventory/supplier_load"
+
+##############################################################################
+
+# WebService URLs
+
+#######################################
+
+webservice:
+
+  emporos:
+
+    url: ""
+
+  pos:
+
+    url: ""
+
+  sig:
+
+    url: ""
+
+##############################################################################
+
+# Workflow URL
+
+##############################################################################
+
+workflow:
+
+  out:
+
+    http:
+
+      url: "http://hosting.enterprismyproj.com/apollo_p01/ALLexOneSoap/workflow"
+
+##############################################################################
+
+# Audit Feed props
+
+##############################################################################
+
+aud:
+
+  db:
+
+    schema: "ALLexone_aud_data"
+
+##############################################################################
+
+# SCAudit props
+
+##############################################################################
+
+scaudit:
+
+  extract:
+
+    path: "/usr/local/ALLexone/data/apollo-PROD/nhin/stage"
+
+  report:
+
+    path: "/usr/local/ALLexone/data/apollo-PROD/auditreport/daily"
+
+  thresholdToStopFiles: ""
+
+##############################################################################
+
+# NHIN props
+
+##############################################################################
+
+nhin:
+
+  audit:
+
+    includedrug: ""
+
+    includesameDayReversal: ""
+
+    outbound:
+
+      path: "/usr/local/ALLexone/data/apollo-PROD/nhin/outbound"
+
+    output:
+
+      path: "/usr/local/ALLexone/data/apollo-PROD/nhin/outbound"
+
+    remote:
+
+      xfile:
+
+        location: "apollomyproj/outbound/NHIN"
+
+  class:
+
+    name: ""
+
+  datafeed:
+
+    cpy:
+
+      type: "sftp"
+
+    id1: "ALLexone_dw"
+
+    pwd1: "ALLexone_dw"
+
+  exclude:
+
+    hundred:
+
+      percent:
+
+        copay: ""
+
+  ftp:
+
+    flag: ""
+
+  includeSameDayReversal: ""
+
+  outbound:
+
+    path: "/usr/local/ALLexone/data/apollo-PROD/nhin/outbound"
+
+  output:
+
+    path: "/usr/local/ALLexone/data/apollo-PROD/nhin/stage"
+
+  remote:
+
+    xfile:
+
+      location: "apollomyproj/STAGE/outbound/NHIN"
+
+  support:
+
+    emailid: "EnterprismyprojSupport@NDCHealth.com"
+
+##############################################################################
+
+# ALLPCS props
+
+##############################################################################
+
+ALLPCS:
+
+  CallBatchSize: ""
+
+  Days_Limit_Past_Due: ""
+
+  batch_run_mode: ""
+
+  batch_run_datetime: ""
+
+  ALLPCS:
+
+    batch:
+
+      debug: ""
