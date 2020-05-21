@@ -23,3 +23,15 @@
 
   
      
+=========================  submodules
+
+[ujam@jenkinMaster ~]$ cd allgitProj
+ 
+ allgitProj]$ git clone https://github.com/sksumanta/newSubScm.git
+
+ allgitProj]$ cd newSubScm/
+    
+    $ git  submodule init
+    $ git submodule add https://github.com/sksumanta/uat.git uat
+    $ git commit -m "the ust submodule is added"
+	$ git push origin master:master
