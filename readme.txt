@@ -29,6 +29,8 @@
  
  allgitProj]$ git clone https://github.com/sksumanta/newSubScm.git
 
+ allgitProj]$ git clone https://github.com/sksumanta/uat.git 
+ 
  allgitProj]$ cd newSubScm/
     
     $ git  submodule init
