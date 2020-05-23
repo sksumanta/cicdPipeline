@@ -21,7 +21,13 @@
   pos i will create and i will present it once approve we will rollout.
   
 
-  
+=================================================
+
+ssh error ( sh key add in svn or tfs)
+
+host key ( one type do manualy)
+vault password encrypt and keep it in .ssh 
+
      
 =========================  submodules
 
