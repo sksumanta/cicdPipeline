@@ -99,3 +99,41 @@ def myList = parsedJson.files.uri.toString()
  
 
 return myList
+
+
+
+Propose a directory structure
+=================================================
+
+FNT_PIT_Deploy
+├── inventories
+│   └── uat
+│       ├── group_vars
+│       │    ├── all.yaml
+│       └── hosts.yaml
+├── roles
+│   ├── GitScm
+│   │   └── tasks
+│   │       ├── gitscm.yaml
+│   │       └── main.yaml
+│   ├── loadVars
+│   │   └── tasks
+│   │       └── main.yaml
+│   ├── downloadBuild
+│   │   └── tasks
+│   │       ├── main.yaml
+│   │       └── pullBuild.yaml
+│   └── deployBuild
+│       └── tasks
+│           ├── disposeBuild.yaml
+│           └── main.yaml
+├── books
+│   ├── source_control.yaml
+│   ├── loadVars.yaml
+│   ├── downloadBuild.yaml
+│   └── deployBuild.yaml
+│
+├── preDeploy.yaml
+├── deployTheBuild.yaml
+└── readMe.txt
+
