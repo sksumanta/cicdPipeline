@@ -1,1 +1,21 @@
 
+---
+
+
+build-org:
+    product-suite:
+    build-developer:
+    build-reviewer:
+    build-tester:
+build-details:
+    change-type: # promote/defect/patch
+    change-id:
+    jira-card: ABC-000
+package_details:
+    ua-package:
+    	- {package-name} or {package-label}
+      - {package-name} or {package-label}
+    up-package:
+    	- {package-name} or {package-label}
+    py-package:
+    	- {package-name} or {package-label}
