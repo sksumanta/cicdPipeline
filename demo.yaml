@@ -14,7 +14,7 @@ build-details:
 package_details:
     ua-package:
     	- {package-name} or {package-label}
-      - {package-name} or {package-label}
+        - {package-name} or {package-label}
     up-package:
     	- {package-name} or {package-label}
     py-package:
