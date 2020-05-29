@@ -1,6 +1,4 @@
-
 ---
-
 
 build-org:
     product-suite:
@@ -12,10 +10,29 @@ build-details:
     change-id:
     jira-card: ABC-000
 package_details:
-    ua-package:
-    	- {package-name} or {package-label}
-        - {package-name} or {package-label}
-    up-package:
-    	- {package-name} or {package-label}
-    py-package:
-    	- {package-name} or {package-label}
+    first-package:
+     [    [ package_name:'a345gdere' , package_label:'202016042405'],
+          [package_name:'a345fdere' , package_label:'202030042405' ]   ]   
+    sec-package: 
+     []   # ​​when: package_details.up-package|length > 0
+    third-package:
+     [ package-name package-label ]
+my-deployment:
+    my-deployment-date: "YYYY/MM/DD"
+    my-deployment-areas:
+        my: true
+    my-build-test:
+        sanity: false
+        sanity_result: false
+        regression: false
+your-deployment:
+    your-deployment-date:
+    # All deployment areas should be false and developer should set it to true based on requirements. It owns mnay challanges
+    # Or, set your-deployment-areas to true and deploy change to all area on your level. This has its own challanges.
+    your-deployment-areas:
+        your: false
+        qa1: false
+        qa8: false
+    your-build-test:
+        sanity: false
+        regression: false
