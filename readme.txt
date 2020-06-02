@@ -102,44 +102,54 @@ return myList
 
 
 
+
 Propose a directory structure
 =================================================
 
 focusDeploy
-├── inventories
+├── inventories				# inventory hold different environment
 │   │── fnt
-│   │   ├── group_vars
+│   │   ├── group_vars			# Here in group_vars we assign variables to particular groups
 │   │   │    ├── all.yaml
-│   │   └── hosts.yaml
+│   │   └── hosts.yaml			# In hosts.yaml we will keep the severs need to be connected for deployment process	
 │   └── pit
 │       ├── group_vars
 │       │    ├── all.yaml
 │       └── hosts.yaml
-├── roles
-│   ├── pullParameter
+├── roles				# This hierarchy represents a "roles"
+│   ├── pullParameter			# This contain the code to pull environment parameter from Github
 │   │   └── tasks
-│   │       ├── pulEnvParameter.yaml
+│   │       ├── pullEnvParameter.yaml
 │   │       └── main.yaml
-│   ├── loadVars
-│   │   └── tasks
-│   │       └── main.yaml
-│   ├── downloadBuild
+│   ├── loadVars			# The loadVars will load the parameters which pulled from Github
+│   │   └── tasks					#========  sample code in loadVars/tasks/main.yaml ==========
+│   │       └── main.yaml				- name: Load the {{ tier }} tier deployment variables
+│   │       						  include_vars:
+│   │       						    dir: '{{ staging.scm }}/{{ mydomain }}'
+│   │       						    files_matching: "{{ mydomain | default('skipping') }}.yaml"
+│   ├── downloadBuild			# Here we download Build
 │   │   └── tasks
 │   │       ├── main.yaml
-│   │       └── pullBuild.yaml
-│   └── deployBuild
+│   │       ├── pullBuild.yaml
+│   │       └── verifybuild.yaml
+│   └── deployBuild			# we will keep business logic to deploy the build
 │       └── tasks
 │           ├── deployingBuild.yaml
 │           ├── uploadParameterFile.yaml
-│           └── main.yaml
-├── books
-│   ├── source_control.yaml
+│           └── main.yaml				
+├── books				# All the playbooks will be executed from books 
+│   ├── sourceControl.yaml
 │   ├── loadVars.yaml
 │   ├── downloadBuild.yaml
+│   ├── verifybuild.yaml
 │   └── deployBuild.yaml
 │
-├── preDeploy.yaml
-├── deployTheBuild.yaml
-└── readMe.txt
-
+├── sourceControl.yaml
+├── preDeploy.yaml			# the user has to execute these indivisual playbooks
+├── deployTheBuild.yaml			#==========  sample code in preDeploy.yaml ==========
+└── readMe.txt					- import_playbook: books/sourcecontrol.yaml
+						- import_playbook: books/loadvars.yaml
+						- import_playbook: books/downloadBuild.yaml
+						- import_playbook: books/verifybuild.yaml
+                                        
 
