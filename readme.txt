@@ -145,7 +145,7 @@ focusDeploy
 │   └── deployBuild.yaml
 │
 ├── sourceControl.yaml
-├── preDeploy.yaml			# the user has to execute these indivisual playbooks
+├── preDeploy.yaml			# the user has to execute these individual  playbooks
 ├── deployTheBuild.yaml			#==========  sample code in preDeploy.yaml ==========
 └── readMe.txt					- import_playbook: books/sourcecontrol.yaml
 						- import_playbook: books/loadvars.yaml
