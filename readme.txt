@@ -122,11 +122,11 @@ focusDeploy
 │   │       ├── pullEnvParameter.yaml
 │   │       └── main.yaml
 │   ├── loadVars			# The loadVars will load the parameters which pulled from Github
-│   │   └── tasks					#========  sample code in loadVars/tasks/main.yaml ==========
-│   │       └── main.yaml				- name: Load the {{ tier }} tier deployment variables
-│   │       						  include_vars:
-│   │       						    dir: '{{ staging.scm }}/{{ mydomain }}'
-│   │       						    files_matching: "{{ mydomain | default('skipping') }}.yaml"
+│   │   └── tasks			#========  sample code in loadVars/tasks/main.yaml ==========
+│   │       └── main.yaml			- name: Load the {{ tier }} tier deployment variables
+│   │       					  include_vars:
+│   │       					    dir: '{{ staging.scm }}/{{ mydomain }}'
+│   │       					    files_matching: "{{ mydomain | default('skipping') }}.yaml"
 │   ├── downloadBuild			# Here we download Build
 │   │   └── tasks
 │   │       ├── main.yaml
