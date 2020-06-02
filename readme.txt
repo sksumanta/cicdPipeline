@@ -105,35 +105,41 @@ return myList
 Propose a directory structure
 =================================================
 
-FNT_PIT_Deploy
+focusDeploy
 ├── inventories
-│   └── uat
-│       ├── group_vars
-│       │    ├── all.yaml
-│       └── hosts.yaml
+│   │── fnt
+│   │   ├── group_vars
+│   │   │    ├── all.yaml
+│   │   └── hosts.yaml
+│   └── pit
+│       ├── group_vars
+│       │    ├── all.yaml
+│       └── hosts.yaml
 ├── roles
-│   ├── GitScm
-│   │   └── tasks
-│   │       ├── gitscm.yaml
-│   │       └── main.yaml
-│   ├── loadVars
-│   │   └── tasks
-│   │       └── main.yaml
-│   ├── downloadBuild
-│   │   └── tasks
-│   │       ├── main.yaml
-│   │       └── pullBuild.yaml
-│   └── deployBuild
-│       └── tasks
-│           ├── disposeBuild.yaml
-│           └── main.yaml
+│   ├── pullParameter
+│   │   └── tasks
+│   │       ├── pulEnvParameter.yaml
+│   │       └── main.yaml
+│   ├── loadVars
+│   │   └── tasks
+│   │       └── main.yaml
+│   ├── downloadBuild
+│   │   └── tasks
+│   │       ├── main.yaml
+│   │       └── pullBuild.yaml
+│   └── deployBuild
+│       └── tasks
+│           ├── deployingBuild.yaml
+│           ├── uploadParameterFile.yaml
+│           └── main.yaml
 ├── books
-│   ├── source_control.yaml
-│   ├── loadVars.yaml
-│   ├── downloadBuild.yaml
-│   └── deployBuild.yaml
+│   ├── source_control.yaml
+│   ├── loadVars.yaml
+│   ├── downloadBuild.yaml
+│   └── deployBuild.yaml
 │
 ├── preDeploy.yaml
 ├── deployTheBuild.yaml
 └── readMe.txt
+
 
