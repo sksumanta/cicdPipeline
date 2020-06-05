@@ -28,10 +28,10 @@ pipeline {
                 echo "Initialize"
                 echo "Checking out SCM Files"
                 //sh "cd ${env.WORKSPACE}/realProject"
-                ansiblePlaybook installation: "ansible", colorized: true, forks: 15, sudoUser: null,
+                sh 'ansiblePlaybook installation: "ansible", colorized: true, forks: 15, sudoUser: null,
                                 playbook: "${env.WORKSPACE}/realProject/books/source_control.yaml", inventory: "${env.WORKSPACE}/realProject/inventories/uat",
                                 extras: "-e tier=uat -e mydomain=${source}",
-                                tags: "checkout"
+                                tags: "checkout"'
  
 			}
 			
