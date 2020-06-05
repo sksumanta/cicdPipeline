@@ -30,8 +30,8 @@ pipeline {
                 //sh "cd ${env.WORKSPACE}/realProject"
                 ansiblePlaybook installation: "ansible", colorized: true, forks: 15, sudoUser: null,
                                 playbook: "${env.WORKSPACE}/realProject/books/source_control.yaml", inventory: "${env.WORKSPACE}/realProject/inventories/uat",
-                                extras: "-e tier=uat -e mydomain=${source}",
-                                tags: "checkout"
+                                extras: "-e tier=uat -e mydomain=${source}"
+				//, tags: "checkout"
  
 			}
 			
