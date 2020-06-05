@@ -31,7 +31,7 @@ pipeline {
                 ansiblePlaybook installation: "ansible", colorized: true, forks: 15, sudoUser: null,
                                 playbook: "${env.WORKSPACE}/realProject/books/source_control.yaml", inventory: "${env.WORKSPACE}/realProject/inventories/uat",
                                 extras: "-e tier=uat -e mydomain=${source}",
-                                tags: "checkout" -vvv
+                                tags: "checkout"
  
 			}
 			
