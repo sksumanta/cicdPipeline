@@ -152,4 +152,116 @@ focusDeploy
 						- import_playbook: books/downloadBuild.yaml
 						- import_playbook: books/verifybuild.yaml
                                         
+all.yaml
+====================
+
+
+---
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Top level entries are assumed to be groups, start with 'all' to have a full hierarchy
+#   - Hosts must be specified in a group's   hosts:
+#     and they must be a key (: terminated)
+#   - groups can have children, hosts and vars keys
+#   - Anything defined under a host is assumed to be a var
+#   - You can enter hostnames or IP addresses
+#   - A hostname/IP can be a member of multiple groups
+#   - ansible_user should have ssh 
+
+# Ungrouped hosts, put them in 'all' or 'ungrouped' group
+all:
+  children:
+    adminserver:
+      hosts:
+        admin1.nyc_rx.com:
+          ansible_connection: local
+          ansible_user: cm
+    javaservers:
+      hosts:
+        admin1.nyc_rx.com:
+          ansible_connection: local
+          ansible_user: cm
+        angel-admin.nyc_rx.com:
+          ansible_user: jboss
+        penn.nyc_rx.com:
+          ansible_user: jboss
+        shadow-admin.nyc_rx.com:
+          ansible_user: cm
+        queens-admin.nyc_rx.com:
+          ansible_user: cm
+    appservers:
+      hosts:
+        forge-admin.nyc_rx.com:
+          ansible_user: jboss
+        banshee-admin.nyc_rx.com:
+          ansible_user: jboss
+        angel-admin.nyc_rx.com:
+          ansible_user: jboss
+        cable-admin.nyc_rx.com:
+          ansible_user: jboss
+        cannonball-admin.nyc_rx.com:
+          ansible_user: jboss
+        chamber-admin.nyc_rx.com:
+          ansible_user: jboss
+        colossus-admin.nyc_rx.com:
+          ansible_user: jboss
+        beast-admin.nyc_rx.com:
+          ansible_user: jboss
+        cyclops-admin.nyc_rx.com:
+          ansible_user: jboss
+        dazzler-admin.nyc_rx.com:
+          ansible_user: jboss
+        iceman-admin.nyc_rx.com:
+          ansible_user: jboss
+        bishop-admin.nyc_rx.com:
+          ansible_user: jboss
+        longshot-admin.nyc_rx.com:
+          ansible_user: jboss
+        jubilee-admin.nyc_rx.com:
+          ansible_user: jboss
+        gambit-admin.nyc_rx.com:
+          ansible_user: jboss
+        joseph-admin.nyc_rx.com:
+          ansible_user: jboss
+        lifeguard-admin.nyc_rx.com:
+          ansible_user: jboss
+        maggot-admin.nyc_rx.com:
+          ansible_user: jboss
+        emmafrost-admin.nyc_rx.com:
+          ansible_user: jboss
+        magneto-admin.nyc_rx.com:
+          ansible_user: jboss
+        penn.nyc_rx.com:
+          ansible_user: jboss
+        teller.nyc_rx.com:
+          ansible_user: jboss
+    batchdeploy:
+      hosts:
+        admin1.nyc_rx.com:
+          ansible_connection: local
+          ansible_user: cm
+    webservers:
+      hosts:
+        abrams-admin.nyc_rx.com:
+          ansible_user: cm
+        bradley-admin.nyc_rx.com:
+          ansible_user: cm
+        chaffee-admin.nyc_rx.com:
+          ansible_user: cm
+        bronx-admin.nyc_rx.com:
+          ansible_user: cm
+    webdeploy:
+      hosts:
+        admin1.nyc_rx.com:
+          ansible_connection: local
+          ansible_user: cm
+    dbdeploy:
+      hosts:
+        admin1.nyc_rx.com:
+          ansible_connection: local
+          ansible_user: cm
+    rddeploy:
+      hosts:
+        queens-admin.nyc_rx.com:
+          ansible_user: cm
 
