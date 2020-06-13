@@ -155,7 +155,6 @@ focusDeploy
 all.yaml
 ====================
 
-
 ---
 #   - Comments begin with the '#' character
 #   - Blank lines are ignored
@@ -175,20 +174,20 @@ all:
       hosts:
         admin1.nyc_rx.com:
           ansible_connection: local
-          ansible_user: cm
+          ansible_user: phyRx
     javaservers:
       hosts:
         admin1.nyc_rx.com:
           ansible_connection: local
-          ansible_user: cm
+          ansible_user: phyRx
         angel-admin.nyc_rx.com:
           ansible_user: jboss
         penn.nyc_rx.com:
           ansible_user: jboss
         shadow-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
         queens-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
     appservers:
       hosts:
         forge-admin.nyc_rx.com:
@@ -239,29 +238,29 @@ all:
       hosts:
         admin1.nyc_rx.com:
           ansible_connection: local
-          ansible_user: cm
+          ansible_user: phyRx
     webservers:
       hosts:
         abrams-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
         bradley-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
         chaffee-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
         bronx-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
     webdeploy:
       hosts:
         admin1.nyc_rx.com:
           ansible_connection: local
-          ansible_user: cm
+          ansible_user: phyRx
     dbdeploy:
       hosts:
         admin1.nyc_rx.com:
           ansible_connection: local
-          ansible_user: cm
+          ansible_user: phyRx
     rddeploy:
       hosts:
         queens-admin.nyc_rx.com:
-          ansible_user: cm
+          ansible_user: phyRx
 
