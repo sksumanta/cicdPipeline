@@ -264,3 +264,38 @@ all:
         queens-admin.nyc_rx.com:
           ansible_user: phyRx
 
+
+
+
+============================== commit github using ansible ===============================
+
+
+
+
+- name: get diff of original and new files
+  command: diff {{ staging.scm }}/{{ erx_domain }}/{{ erx_domain }}.yaml {{ staging.dir }}/staged/{{ erx_domain }}.yaml
+  failed_when: yamlDiff.rc > 1
+  register: yamlDiff
+
+- name: check commit and push if there were changes
+  block:
+    - name: print diff
+      debug:
+        msg: "{{ yamlDiff.stdout }}"
+
+    - name: update local scm copy
+      command: mv {{ staging.dir }}/staged/{{ erx_domain }}.yaml {{ staging.scm }}/{{ erx_domain }}/{{ erx_domain }}.yaml
+      args:
+        removes: "{{ staging.dir }}/staged/{{ erx_domain }}.yaml"
+
+    - name: Commit any changes to git
+      shell: git commit -m "Updated via deployment of build {{ build_num }}" {{ erx_domain }}/{{ erx_domain }}.yaml
+      args:
+        chdir: "{{ staging.scm }}"
+
+    - name: Push commit to git
+      shell: git push
+      args:
+        chdir: "{{ staging.scm }}"
+  when: yamlDiff.rc == 1
+
