@@ -51,9 +51,6 @@ Access the artifacts build directory configuration on Jenkins using Groovy scrip
 ==================================================================================
 
 
-
-
-
 import groovy.json.JsonSlurper
 
  
@@ -61,7 +58,6 @@ import groovy.json.JsonSlurper
 def baseVersion = "10.1.0.5"
 
  
-
 def url = "https://tools.myproject.com/artifactory/api/storage/my-enterpriserx/artifacts/"
 
 def query = "?list&deep=0&depth=1&listFolders=1&includeRootPath=0"
@@ -101,18 +97,28 @@ def myList = parsedJson.files.uri.toString()
 return myList
 
 
+How to encrypt and decrypt the string in unix
+==================================================
+
+$ echo Hi | openssl enc -aes-128-cbc -a -salt -pass pass:wtf
+U2FsdGVkX18qAdhqop1SffsewHue6EOPNKv9dXc/0rI=
+
+$ echo U2FsdGVkX18qAdhqop1SffsewHue6EOPNKv9dXc/0rI= | openssl enc -aes-128-cbc -a -d -salt -pass pass:wtf
+Hi
+$
+
 
 
 Propose a directory structure
 =================================================
 
-focusDeploy
+foDeploy
 ├── inventories				# inventory hold different environment
-│   │── fnt
+│   │── fint
 │   │   ├── group_vars			# Here in group_vars we assign variables to particular groups
 │   │   │    ├── all.yaml
 │   │   └── hosts.yaml			# In hosts.yaml we will keep the severs need to be connected for deployment process	
-│   └── pit
+│   └── prit
 │       ├── group_vars
 │       │    ├── all.yaml
 │       └── hosts.yaml
