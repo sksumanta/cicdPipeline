@@ -305,3 +305,21 @@ all:
         chdir: "{{ staging.scm }}"
   when: yamlDiff.rc == 1
 
+
+
+===============================================================================================================================================================
+Ansible execute each role in different host
+=====================================================
+---
+- hosts: groupa
+  roles:
+    - oracle
+
+- hosts: groupb
+  roles:
+    - apache
+
+- hosts: local
+  connection: local
+  tasks:
+    - { debug: { msg: "Tasks to run locally" } }
