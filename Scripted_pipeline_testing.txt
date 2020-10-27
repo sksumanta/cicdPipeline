@@ -1,0 +1,21 @@
+node('linuxagent1'){
+ssh_server= "newisland34"
+ssh_env = "DEV"
+runfailure = "false"
+String recipient = 'sksahoo@mycomp.com'
+
+stage('initialize'){
+ sshagent(['theCicd']){
+   my_call1 = $/ssh -q suman@${ssh_server} -o  StaticHostKeyChecking=no -C   'ansible-playbook copyzipfile.yaml -i hosts.yaml'/$
+   try{
+      build = sh(script: "${my_call1}", returnStdout: true)
+      echo "${build}"
+    }
+  catch(err){
+      runFailure = "true"
+      echo " failed ${err}"
+      mail bcc: '', body: "<b>build failed</b><br>project: ${env.JOB_NUMBER} <br>
+      sh "exit 1"
+   }
+ }
+}
