@@ -14,7 +14,7 @@ stage('initialize'){
   catch(err){
       runFailure = "true"
       echo " failed ${err}"
-      mail bcc: '', body: "<b>build failed</b><br>project: ${env.JOB_NUMBER} <br>
+      mail bcc: '', body: "<b>build failed</b><br>project: ${env.JOB_NAME} <br> Build Number: {env.BUILD_NUMBER} <br> Build URL: ${env.BUILD_URL}", cc: '', charset: 'UTF-8' ,from: '', mimeType: 'text/html', replyTo: '' , subject: "error ci: project name ---> ${env.JOB_NAME}", to: recipient;     
       sh "exit 1"
    }
  }
