@@ -9,7 +9,7 @@ Flow of the Jenkins process:
     if everything is success then code merge to master branch.
 	Now Jenkins pipeline trigger to compile, Unit test, check code quality & venerability.
 once success the code upload to the artifactory.
- 
+ <img src="C:\Users\Sumanta\Desktop\Untitled.png">
 	 		  		  
 Sonar qube configuration?
 	mvn clean install sonar:sonar
