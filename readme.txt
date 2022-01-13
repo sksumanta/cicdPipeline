@@ -4,6 +4,8 @@
 
 		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
 		
+		https://medium.com/the-devops-ship/custom-jenkins-dockerfile-jenkins-docker-image-with-pre-installed-plugins-default-admin-user-d0107b582577
+		
 ==========================================================================================
 
 
