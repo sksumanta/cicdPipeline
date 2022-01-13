@@ -2,9 +2,10 @@
 
 ==========================================================================================
 
-		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
+		BUILDING WITH JENKINS INSIDE AN EPHEMERAL DOCKER CONTAINER
 		
 		https://medium.com/the-devops-ship/custom-jenkins-dockerfile-jenkins-docker-image-with-pre-installed-plugins-default-admin-user-d0107b582577
+		https://technology.riotgames.com/news/tutorial-building-jenkins-inside-ephemeral-docker-container
 		
 ==========================================================================================
 
