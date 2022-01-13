@@ -7,6 +7,10 @@
 		https://medium.com/the-devops-ship/custom-jenkins-dockerfile-jenkins-docker-image-with-pre-installed-plugins-default-admin-user-d0107b582577
 		https://technology.riotgames.com/news/tutorial-building-jenkins-inside-ephemeral-docker-container
 		
+		CH-1    https://www.youtube.com/watch?v=ZsXr1s-Q7J8
+		
+		CH-2    https://www.youtube.com/watch?v=jaaMNK0Df8U
+		
 ==========================================================================================
 
 
